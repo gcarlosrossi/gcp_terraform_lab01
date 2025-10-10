@@ -16,7 +16,7 @@ La arquitectura propuesta está compuesta por los siguientes componentes:
 - **GitHub Actions** → CI/CD para automatizar el despliegue.  
 - **Postman** → Pruebas funcionales y validación de endpoints.
 
-![Arquitectura Objetivo](./arquitectura_objetivo.png)
+![Arquitectura Objetivo](./assets/ARQ-LAB01-ARQUITECTURA%20OBJETIVO.png)
 
 ---
 
