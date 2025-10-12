@@ -43,12 +43,13 @@ variable "environment_variables" {
   default     = {}
 }
 
-variable "source_archive_object" {
-  description = "Name of the source archive in GCS bucket"
-  type        = string
-}
-
 variable "firestore_database_id" {
   description = "Firestore database ID"
   type        = string
+}
+
+variable "labels" {
+  description = "Labels to apply to all resources"
+  type        = map(string)
+  default     = {}
 }

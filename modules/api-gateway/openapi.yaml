@@ -1,0 +1,77 @@
+swagger: "2.0"
+info:
+  title: "CRUD API"
+  description: "Simple CRUD API for Firestore with API Key authentication"
+  version: "1.0.0"
+schemes:
+  - "https"
+produces:
+  - "application/json"
+securityDefinitions:
+  api_key:
+    type: "apiKey"
+    name: "x-api-key"
+    in: "header"
+security:
+  - api_key: []
+paths:
+  /items:
+    post:
+      summary: "Create item"
+      operationId: "createItem"
+      x-google-backend:
+        address: ${create_url}
+      responses:
+        201:
+          description: "Item created"
+    get:
+      summary: "Read items"
+      operationId: "readItems"
+      x-google-backend:
+        address: ${read_url}
+      responses:
+        200:
+          description: "List of items"
+  /items/{id}:
+    get:
+      summary: "Read single item"
+      operationId: "readItem"
+      x-google-backend:
+        address: ${read_url}/{id}
+        path_translation: APPEND_PATH_TO_ADDRESS
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Item details"
+    put:
+      summary: "Update item"
+      operationId: "updateItem"
+      x-google-backend:
+        address: ${update_url}/{id}
+        path_translation: APPEND_PATH_TO_ADDRESS
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Item updated"
+    delete:
+      summary: "Delete item"
+      operationId: "deleteItem"
+      x-google-backend:
+        address: ${delete_url}/{id}
+        path_translation: APPEND_PATH_TO_ADDRESS
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        204:
+          description: "Item deleted"

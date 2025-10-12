@@ -23,3 +23,9 @@ variable "function_urls" {
     delete = string
   })
 }
+
+variable "labels" {
+  description = "Labels to apply to all resources"
+  type        = map(string)
+  default     = {}
+}
