@@ -1,0 +1,32 @@
+# Environment variables
+.env
+.env.*
+
+# Terraform
+!*.tfvars.example
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate*
+*.tfplan
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+venv/
+env/
+
+# Cloud Functions
+functions/*/tmp/
+*.zip
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
