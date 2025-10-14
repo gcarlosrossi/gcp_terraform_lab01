@@ -6,7 +6,7 @@ Se incluye la exposición de APIs, ejecución de funciones sin servidor, persist
 
 ## 📚 Tabla de Contenido
 
-1. 🧩 [Arquitectura Objetivo](#arquitectura- Previos)
+1. 🧩 [Arquitectura Objetivo](#arquitectura-objetivo)
 2. ⚙️ Pasos del Laboratorio
 3. 🧱 Estructura del Repositorio
 4. 🔐 Buenas Prácticas
