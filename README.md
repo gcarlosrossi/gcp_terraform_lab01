@@ -13,7 +13,6 @@ Se incluye la exposición de APIs, ejecución de funciones sin servidor, persist
 5. 🧪 [Tecnologías y Herramientas](#tecnologías-y-herramientas)
 6. 👨‍💻 [Autores](#autores)
 
-
 ---
 
 
