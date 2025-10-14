@@ -7,10 +7,11 @@ Se incluye la exposición de APIs, ejecución de funciones sin servidor, persist
 ## 📚 Tabla de Contenido
 
 1. 🧩 [Arquitectura Objetivo](#arquitectura-objetivo)
-2. ⚙️ Pasos del Laboratorio
-3. 🧱 Estructura del Repositorio
-4. 🔐 Buenas Prácticas
-5. 🧪 Tecnologías y Herramientas
+2. ⚙️ [Pasos del Laboratorio](#pasos-del-laboratorio)
+3. 🧱 [Estructura del Repositorio](#estructura-del-repositorio)
+4. 🔐 [Buenas Prácticas](#buenas-practicas)
+5. 🧪 [Tecnologías y Herramientas](#tecnologias-y-herramientas)
+6. 👨‍💻 [Autores](#autores)
 
 
 ---
@@ -31,7 +32,7 @@ La arquitectura propuesta está compuesta por los siguientes componentes:
 
 ---
 
-## ⚙️ Pasos del Laboratorio
+## ⚙️Pasos del Laboratorio
 
    **Preparación del Entorno**
    - Instalación de Terraform, GCloud CLI y autenticación en GCP.
@@ -76,7 +77,7 @@ La arquitectura propuesta está compuesta por los siguientes componentes:
 
 ---
 
-## 🧱 Estructura del Repositorio
+## 🧱Estructura del Repositorio
 
    ```bash
    GCP_TERRAFORM_LAB01/
@@ -136,7 +137,7 @@ La arquitectura propuesta está compuesta por los siguientes componentes:
 
    ---
 
-## 🔐 Buenas Prácticas
+## 🔐Buenas Prácticas
 
    - Uso de **Remote Backend (GCS)** para el estado de Terraform.  
    - Versionamiento de módulos.  
@@ -145,7 +146,7 @@ La arquitectura propuesta está compuesta por los siguientes componentes:
 
 ---
 
-## 🧪 Tecnologías y Herramientas
+## 🧪Tecnologías y Herramientas
 
 | Herramienta | Descripción |
 |--------------|-------------|
@@ -159,7 +160,7 @@ La arquitectura propuesta está compuesta por los siguientes componentes:
 
 ---
 
-## 👨‍💻 Autores
+## 👨‍💻Autores
 
    **[Gregorovichz Carlos Rossi]**  
    Chapter Lead - Arquitecto de Soluciones Expert
