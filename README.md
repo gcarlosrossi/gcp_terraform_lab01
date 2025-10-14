@@ -9,7 +9,7 @@ La solución implementa una arquitectura moderna, automatizada y escalable para 
 
 La arquitectura propuesta está compuesta por los siguientes componentes:
 
-- **Apigee API Platform** → Exposición y gestión de APIs.  
+- **Api Gateway** → Exposición y gestión de APIs.  
 - **Cloud Functions** → Lógica de negocio sin servidor (serverless).  
 - **Firestore** → Base de datos NoSQL nativa de GCP.  
 - **Terraform** → Despliegue y gestión de infraestructura declarativa.  
@@ -26,11 +26,25 @@ La arquitectura propuesta está compuesta por los siguientes componentes:
    - Instalación de Terraform, GCloud CLI y autenticación en GCP.
    - Configuración de proyecto y credenciales.
 
+   ## 🐍 Instalación de Python (Requisito para Scripts del Lab)
+
+   Algunos scripts del laboratorio requieren Python 3.10 o superior. A continuación se detallan los pasos para instalarlo según el sistema operativo:
+
+   ### 🔧 Windows
+
+   - Descarga el instalador desde python.org/downloads.
+   - Ejecuta el instalador y **marca la opción "Add Python to PATH"**.
+   - Haz clic en **"Install Now"**.
+   - Verifica la instalación:
+      ```bash
+      python --version
+
+
 2. **Estructura del Proyecto Base Terraform**
-   - Organización modular (carpetas `modules/`, `environments/`, `main.tf`, etc.).
+   - Organización modular (carpetas `assets/`, `environments/`, `functions/`,`modules/`,`main.tf`, etc.).
 
 3. **Desarrollo de Módulos**
-   - Módulo para Apigee
+   - Módulo para Api Gateway
    - Módulo para Cloud Functions
    - Módulo para Firestore
 
@@ -54,25 +68,59 @@ La arquitectura propuesta está compuesta por los siguientes componentes:
 ## 🧱 Estructura del Repositorio
 
 ```bash
-terraform-serverless-lab/
-│
-├── modules/
-│   ├── apigee/
-│   ├── cloud-functions/
-│   └── firestore/
-│
-├── environments/
-│   ├── dev/
-│   └── prod/
+GCP_TERRAFORM_LAB01/
 │
 ├── .github/workflows/
 │   └── ci-cd.yml
 │
+├── assets/
+│   └── ARQ-LAB01-ARQUITECTURA OBJETIVO.png
+│
+├── environments/
+│   ├── dev.tf
+│   └── prod.tf
+│
+├── functions/
+│   ├── create/
+│   │ └── main.py
+│   ├── delete/
+│   │ └── main.py
+│   ├── read/
+│   │ └── main.py
+│   ├── shared/
+│   │ └── mainrequirements.txt
+│   └── update/
+│     └── main.py
+│
+├── modules/
+│   ├── api-gateway/
+│   │ ├── api-gateway.tf
+│   │ ├── api-key.tf
+│   │ ├── openapi.yaml
+│   │ ├── outputs.tf
+│   │ └── variables.tf
+│   ├── cloud-functions/
+│   │ ├── archives.tf
+│   │ ├── bucket.tf
+│   │ ├── functions.tf
+│   │ ├── iam.tf
+│   │ ├── outputs.tf
+│   │ ├── service_accounts.tf
+│   │ └── variables.tf
+│   └── firestore/
+│     ├── firestore.tf
+│     ├── outputs.tf
+│     └── variables.tf
+│
+├── .gitignore
+├── apis.tf
+├── backend.tf
 ├── main.tf
-├── variables.tf
 ├── outputs.tf
+├── provider.tf
 ├── README.md
-└── arquitectura_objetivo.png
+├── variables.tf
+└── versions.tf
 ```
 
 ---
