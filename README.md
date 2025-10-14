@@ -6,12 +6,12 @@ Se incluye la exposición de APIs, ejecución de funciones sin servidor, persist
 
 ## 📚 Tabla de Contenido
 
-1. 🧩 Arquitectura Objetivo (#arquitectura-objetivo)
-2. ⚙️ Pasos del Laboratorio (#pasos-del-Laboratorio)
-3. 🧱 Estructura del Repositorio (#estructura-del-repositorio)
-4. 🔐 Buenas Prácticas (#buenas-practicas)
-5. 🧪 Tecnologías y Herramientas (#tecnologías-y-Herramientas)
-6. 👨‍💻 Autores (#autores)
+1. 🧩 [Arquitectura Objetivo](#arquitectura- Previos
+3. ⚙️ Pasos del Laboratorio
+4. 🧱 Estructura del Repositorio
+5. 🔐 Buenas Prácticas
+6. 🧪 Tecnologías y Herramientas
+
 
 ---
 
