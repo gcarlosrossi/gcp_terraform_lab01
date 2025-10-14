@@ -140,7 +140,7 @@ GCP_TERRAFORM_LAB01/
 |--------------|-------------|
 | Terraform | IaC para gestionar la infraestructura |
 | GCP | Plataforma cloud principal |
-| Apigee | Gestión de APIs |
+| Api Gateway | Gestión de APIs |
 | Cloud Functions | Ejecución de funciones sin servidor |
 | Firestore | Base de datos NoSQL |
 | GitHub Actions | CI/CD automatizado |
