@@ -6,12 +6,12 @@ Se incluye la exposición de APIs, ejecución de funciones sin servidor, persist
 
 ## 📚 Tabla de Contenido
 
-1. 🧩 Arquitectura Objetivo (#Arquitectura Objetivo)
-2. ⚙️ Pasos del Laboratorio (#Pasos del Laboratorio)
-3. 🧱 Estructura del Repositorio (#Estructura del Repositorio)
-4. 🔐 Buenas Prácticas (#Buenas Prácticas)
-5. 🧪 Tecnologías y Herramientas (#Tecnologías y Herramientas)
-6. 👨‍💻 Autores (#Autores)
+1. 🧩 Arquitectura Objetivo (#arquitectura-objetivo)
+2. ⚙️ Pasos del Laboratorio (#pasos-del-Laboratorio)
+3. 🧱 Estructura del Repositorio (#estructura-del-repositorio)
+4. 🔐 Buenas Prácticas (#buenas-practicas)
+5. 🧪 Tecnologías y Herramientas (#tecnologías-y-Herramientas)
+6. 👨‍💻 Autores (#autores)
 
 ---
 
@@ -37,11 +37,11 @@ La arquitectura propuesta está compuesta por los siguientes componentes:
    - Instalación de Terraform, GCloud CLI y autenticación en GCP.
    - Configuración de proyecto y credenciales.
 
-      ## 🐍 Instalación de Python (Requisito para Scripts del Lab)
+      **🐍 Instalación de Python (Requisito para Scripts del Lab)**
 
       Algunos scripts del laboratorio requieren Python 3.10 o superior. A continuación se detallan los pasos para instalarlo según el sistema operativo:
 
-      ### 🔧 Windows
+      **🔧 Windows**
 
       - Descarga el instalador desde python.org/downloads.
       - Ejecuta el instalador y **marca la opción "Add Python to PATH"**.
