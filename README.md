@@ -1,9 +1,21 @@
-   # Laboratorio 01 - Implementación Serverless 🚀
+# 🧪 Laboratorio 01 - Implementación Serverless en GCP 🚀
 
-Este proyecto tiene como objetivo implementar una **arquitectura Serverless** en **Google Cloud Platform (GCP)** utilizando **Terraform** como herramienta de Infraestructura como Código (IaC).  
-La solución implementa una arquitectura moderna, automatizada y escalable para el despliegue de componentes serverless y APIs gestionadas.
+Este laboratorio tiene como objetivo implementar una arquitectura **Serverless moderna, automatizada y escalable** en **Google Cloud Platform (GCP)** utilizando **Terraform** como herramienta de Infraestructura como Código (IaC).  
+Se incluye la exposición de APIs, ejecución de funciones sin servidor, persistencia en Firestore y automatización con GitHub Actions.
+
+
+## 📚 Tabla de Contenido
+
+1. 🧩 Arquitectura Objetivo (#Arquitectura Objetivo)
+2. 🔧 Requisitos Previos
+3. ⚙️ Pasos del Laboratorio (#Pasos del Laboratorio)
+5. 🧱 Estructura del Repositorio (#Estructura del Repositorio)
+6. 🔐 Buenas Prácticas (#Buenas Prácticas)
+7. 🧪 Tecnologías y Herramientas (#Tecnologías y Herramientas)
+8. �‍💻 Autores (#Autores)
 
 ---
+
 
 ## 🧩 Arquitectura Objetivo
 
@@ -148,7 +160,7 @@ GCP_TERRAFORM_LAB01/
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
 **[Gregorovichz Carlos Rossi]**  
 Chapter Lead - Arquitecto de Soluciones Expert
