@@ -7,12 +7,11 @@ Se incluye la exposición de APIs, ejecución de funciones sin servidor, persist
 ## 📚 Tabla de Contenido
 
 1. 🧩 Arquitectura Objetivo (#Arquitectura Objetivo)
-2. 🔧 Requisitos Previos
-3. ⚙️ Pasos del Laboratorio (#Pasos del Laboratorio)
-5. 🧱 Estructura del Repositorio (#Estructura del Repositorio)
-6. 🔐 Buenas Prácticas (#Buenas Prácticas)
-7. 🧪 Tecnologías y Herramientas (#Tecnologías y Herramientas)
-8. �‍💻 Autores (#Autores)
+2. ⚙️ Pasos del Laboratorio (#Pasos del Laboratorio)
+3. 🧱 Estructura del Repositorio (#Estructura del Repositorio)
+4. 🔐 Buenas Prácticas (#Buenas Prácticas)
+5. 🧪 Tecnologías y Herramientas (#Tecnologías y Herramientas)
+6. 👨‍💻 Autores (#Autores)
 
 ---
 
@@ -34,115 +33,115 @@ La arquitectura propuesta está compuesta por los siguientes componentes:
 
 ## ⚙️ Pasos del Laboratorio
 
-1. **Preparación del Entorno**
+   **Preparación del Entorno**
    - Instalación de Terraform, GCloud CLI y autenticación en GCP.
    - Configuración de proyecto y credenciales.
 
-   ## 🐍 Instalación de Python (Requisito para Scripts del Lab)
+      ## 🐍 Instalación de Python (Requisito para Scripts del Lab)
 
-   Algunos scripts del laboratorio requieren Python 3.10 o superior. A continuación se detallan los pasos para instalarlo según el sistema operativo:
+      Algunos scripts del laboratorio requieren Python 3.10 o superior. A continuación se detallan los pasos para instalarlo según el sistema operativo:
 
-   ### 🔧 Windows
+      ### 🔧 Windows
 
-   - Descarga el instalador desde python.org/downloads.
-   - Ejecuta el instalador y **marca la opción "Add Python to PATH"**.
-   - Haz clic en **"Install Now"**.
-   - Verifica la instalación:
+      - Descarga el instalador desde python.org/downloads.
+      - Ejecuta el instalador y **marca la opción "Add Python to PATH"**.
+      - Haz clic en **"Install Now"**.
+      - Verifica la instalación:
+         ```bash
+         python --version
+
+
+   **Estructura del Proyecto Base Terraform**
+      - Organización modular (carpetas `assets/`, `environments/`, `functions/`,`modules/`,`main.tf`, etc.).
+
+   **Desarrollo de Módulos**
+      - Módulo para Api Gateway
+      - Módulo para Cloud Functions
+      - Módulo para Firestore
+
+   **Despliegue de Infraestructura**
+      - Ejecución de los comandos:
       ```bash
-      python --version
+      terraform init
+      terraform plan
+      terraform apply
+      ```
 
+   **Pruebas Funcionales**
+      - Validación de endpoints mediante Postman.
 
-2. **Estructura del Proyecto Base Terraform**
-   - Organización modular (carpetas `assets/`, `environments/`, `functions/`,`modules/`,`main.tf`, etc.).
-
-3. **Desarrollo de Módulos**
-   - Módulo para Api Gateway
-   - Módulo para Cloud Functions
-   - Módulo para Firestore
-
-4. **Despliegue de Infraestructura**
-   - Ejecución de los comandos:
-     ```bash
-     terraform init
-     terraform plan
-     terraform apply
-     ```
-
-5. **Pruebas Funcionales**
-   - Validación de endpoints mediante Postman.
-
-6. **Observabilidad y Seguridad**
-   - Configuración de logs y métricas en Cloud Logging y Cloud Monitoring.
-   - Reglas IAM mínimas necesarias.
+   **Observabilidad y Seguridad**
+      - Configuración de logs y métricas en Cloud Logging y Cloud Monitoring.
+      - Reglas IAM mínimas necesarias.
 
 ---
 
 ## 🧱 Estructura del Repositorio
 
-```bash
-GCP_TERRAFORM_LAB01/
-│
-├── .github/workflows/
-│   └── ci-cd.yml
-│
-├── assets/
-│   └── ARQ-LAB01-ARQUITECTURA OBJETIVO.png
-│
-├── environments/
-│   ├── dev.tf
-│   └── prod.tf
-│
-├── functions/
-│   ├── create/
-│   │ └── main.py
-│   ├── delete/
-│   │ └── main.py
-│   ├── read/
-│   │ └── main.py
-│   ├── shared/
-│   │ └── mainrequirements.txt
-│   └── update/
-│     └── main.py
-│
-├── modules/
-│   ├── api-gateway/
-│   │ ├── api-gateway.tf
-│   │ ├── api-key.tf
-│   │ ├── openapi.yaml
-│   │ ├── outputs.tf
-│   │ └── variables.tf
-│   ├── cloud-functions/
-│   │ ├── archives.tf
-│   │ ├── bucket.tf
-│   │ ├── functions.tf
-│   │ ├── iam.tf
-│   │ ├── outputs.tf
-│   │ ├── service_accounts.tf
-│   │ └── variables.tf
-│   └── firestore/
-│     ├── firestore.tf
-│     ├── outputs.tf
-│     └── variables.tf
-│
-├── .gitignore
-├── apis.tf
-├── backend.tf
-├── main.tf
-├── outputs.tf
-├── provider.tf
-├── README.md
-├── variables.tf
-└── versions.tf
-```
+   ```bash
+   GCP_TERRAFORM_LAB01/
+   │
+   ├── .github/workflows/
+   │   └── ci-cd.yml
+   │
+   ├── assets/
+   │   └── ARQ-LAB01-ARQUITECTURA OBJETIVO.png
+   │
+   ├── environments/
+   │   ├── dev.tf
+   │   └── prod.tf
+   │
+   ├── functions/
+   │   ├── create/
+   │   │ └── main.py
+   │   ├── delete/
+   │   │ └── main.py
+   │   ├── read/
+   │   │ └── main.py
+   │   ├── shared/
+   │   │ └── mainrequirements.txt
+   │   └── update/
+   │     └── main.py
+   │
+   ├── modules/
+   │   ├── api-gateway/
+   │   │ ├── api-gateway.tf
+   │   │ ├── api-key.tf
+   │   │ ├── openapi.yaml
+   │   │ ├── outputs.tf
+   │   │ └── variables.tf
+   │   ├── cloud-functions/
+   │   │ ├── archives.tf
+   │   │ ├── bucket.tf
+   │   │ ├── functions.tf
+   │   │ ├── iam.tf
+   │   │ ├── outputs.tf
+   │   │ ├── service_accounts.tf
+   │   │ └── variables.tf
+   │   └── firestore/
+   │     ├── firestore.tf
+   │     ├── outputs.tf
+   │     └── variables.tf
+   │
+   ├── .gitignore
+   ├── apis.tf
+   ├── backend.tf
+   ├── main.tf
+   ├── outputs.tf
+   ├── provider.tf
+   ├── README.md
+   ├── variables.tf
+   └── versions.tf
+   ```
 
----
+   ---
 
 ## 🔐 Buenas Prácticas
 
-- Uso de **Remote Backend (GCS)** para el estado de Terraform.  
-- Versionamiento de módulos.  
-- Aplicación de **principio de menor privilegio (PoLP)**.  
-- Automatización del pipeline con **GitHub Actions**.
+   - Uso de **Remote Backend (GCS)** para el estado de Terraform.  
+   - Versionamiento de módulos.  
+   - Aplicación de **principio de menor privilegio (PoLP)**.  
+   - Automatización del pipeline con **GitHub Actions**.
 
 ---
 
@@ -162,13 +161,13 @@ GCP_TERRAFORM_LAB01/
 
 ## 👨‍💻 Autores
 
-**[Gregorovichz Carlos Rossi]**  
-Chapter Lead - Arquitecto de Soluciones Expert
-📧 [gregorovichz.carlos@rimac.com.pe]  
+   **[Gregorovichz Carlos Rossi]**  
+   Chapter Lead - Arquitecto de Soluciones Expert
+   📧 [gregorovichz.carlos@rimac.com.pe]  
 
-**[Kevin Chagua Callupe]**  
-Arquitecto de Soluciones Specialist
-📧 [kevin.chaguac@rimac.com.pe]  
+   **[Kevin Chagua Callupe]**  
+   Arquitecto de Soluciones Specialist
+   📧 [kevin.chaguac@rimac.com.pe]  
 
 ---
 
