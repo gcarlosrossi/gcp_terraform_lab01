@@ -152,8 +152,11 @@ GCP_TERRAFORM_LAB01/
 
 **[Gregorovichz Carlos Rossi]**  
 Chapter Lead - Arquitecto de Soluciones Expert
-📧 [cgregorovichz@gmail.com]  
-🌐 [https://github.com/gcarlosrossi](https://github.com/gcarlosrossi)
+📧 [gregorovichz.carlos@rimac.com.pe]  
+
+**[Kevin Chagua Callupe]**  
+Arquitecto de Soluciones Specialist
+📧 [kevin.chaguac@rimac.com.pe]  
 
 ---
 
