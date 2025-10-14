@@ -6,17 +6,17 @@ Se incluye la exposición de APIs, ejecución de funciones sin servidor, persist
 
 ## 📚 Tabla de Contenido
 
-1. 🧩 [Arquitectura Objetivo](#arquitectura- Previos
-3. ⚙️ Pasos del Laboratorio
-4. 🧱 Estructura del Repositorio
-5. 🔐 Buenas Prácticas
-6. 🧪 Tecnologías y Herramientas
+1. 🧩 [Arquitectura Objetivo](#arquitectura- Previos)
+2. ⚙️ Pasos del Laboratorio
+3. 🧱 Estructura del Repositorio
+4. 🔐 Buenas Prácticas
+5. 🧪 Tecnologías y Herramientas
 
 
 ---
 
 
-## 🧩 Arquitectura Objetivo
+## 🧩Arquitectura Objetivo
 
 La arquitectura propuesta está compuesta por los siguientes componentes:
 
