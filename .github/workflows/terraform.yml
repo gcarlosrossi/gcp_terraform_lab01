@@ -1,56 +1,46 @@
 name: 'Terraform CI/CD'
 
 on:
-  #pull_request:
-  #  branches: [feature/initial-structure]]
   push:
-    branches: [feature/initial-structure]
+    branches:
+      - develop-deploy # Se activa solo con pushes a la rama 'main'
 
 jobs:
-  plan:
-    name: 'Terraform Plan'
+  terraform:
+    name: 'Terraform'
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    environment: dev
     env:
-      GOOGLE_PROJECT: ${{ secrets.GCP_PROJECT_ID }} 
-    permissions:
-      contents: read
-      pull-requests: write
+      GOOGLE_PROJECT: ${{ secrets.GCP_PROJECT_TERRAFORM }} # Define una variable de entorno
 
     steps:
+      # 1. Clona el repositorio para que el workflow tenga acceso al código
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Authenticate to GCP
-        uses: google-github-actions/auth@v2
+      # 2. Autentica con GCP usando la clave de la cuenta de servicio
+      - name: Google Auth
+        id: auth
+        uses: 'google-github-actions/auth@v2'
         with:
-          credentials_json: ${{ secrets.GCP_SA_TERRAFORM }}
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
 
+      # 3. Instala la versión de Terraform que necesites
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: 1.0.0 ##${{ vars.TF_VERSION }}
+          terraform_version: 1.5.0 # Puedes cambiar la versión
 
+      # 4. Inicializa Terraform (descarga providers y configura el backend)
       - name: Terraform Init
+        id: init
         run: terraform init
 
-      - name: Terraform Format Check
-        run: terraform fmt -check -recursive
-        continue-on-error: true
-
-      - name: Terraform Validate
-        run: terraform validate
-
+      # 5. Genera el plan de ejecución para ver los cambios
       - name: Terraform Plan
-        run: terraform plan -var-file=${{ vars.TF_VAR_FILE }} -out=tfplan
+        id: plan
+        run: terraform plan -no-color
 
-      - name: Upload Plan
-        uses: actions/upload-artifact@v4
-        with:
-          name: tfplan-${{ github.event.pull_request.number }}
-          path: tfplan
-          retention-days: 5
-
-      - name: Show Plan
-        run: terraform show -no-color tfplan
+      # 6. Aplica los cambios SOLO si el push es a la rama 'main'
+      - name: Terraform Apply
+        if: github.ref == 'refs/heads/develop-deploy'
+        run: terraform apply -auto-approve -input=false
