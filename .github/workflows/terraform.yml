@@ -10,7 +10,7 @@ jobs:
     name: 'Terraform'
     runs-on: ubuntu-latest
     env:
-      GOOGLE_PROJECT: ${{ secrets.GCP_PROJECT_TERRAFORM }} # Define una variable de entorno
+      GOOGLE_PROJECT: ${{ secrets.GCP_PROJECT_ID }} # Define una variable de entorno
 
     steps:
       # 1. Clona el repositorio para que el workflow tenga acceso al código
@@ -22,7 +22,7 @@ jobs:
         id: auth
         uses: 'google-github-actions/auth@v2'
         with:
-          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+          credentials_json: '${{ secrets.GCP_SA_TERRAFORM }}'
 
       # 3. Instala la versión de Terraform que necesites
       - name: Setup Terraform
